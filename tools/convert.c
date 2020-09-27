@@ -4,7 +4,6 @@
 //
 //  Created by mabingtao on 24/09/2020.
 //
-#include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
@@ -81,7 +80,6 @@ void decodeSyslog(const char *src, size_t srcLen, char *out, size_t *outLen)
 			else
 			{
 				// Unknown form: copy as-is.
-				// out.addAll(bytes.getRange(0, 4));
 				memcpy(out[ol], src[i], 4);
 				ol += 4;
 			}
